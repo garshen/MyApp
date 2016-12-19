@@ -1,0 +1,51 @@
+<div data-role="view" data-title="View" data-layout="main" data-model="app.formView" data-show="app.formView.onShow" data-after-show="app.formView.afterShow" id="formViewScreen" class="screen">
+    <div id="formViewModel" class="form-view screen__content screen__content--form add-item-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li class="form-content-item">
+
+
+                    <label id="date6Field" class="field km-listview-label field--datetime-local">
+                        <span class="field__label" data-bind="text: strings.formView.formViewModel.editableListForm73.date6.title"></span>
+
+
+                        <input id="date6" data-bind="value: addFormData.date6" type="datetime-local">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+                    <label id="textAreaFieldField" class="km-label-above field field--textarea">
+
+                        <span class="field__label" data-bind="text: strings.formView.formViewModel.editableListForm73.textAreaField.title"></span>
+
+                        <textarea rows="7" data-bind="value: addFormData.textAreaField"></textarea>
+                    </label>
+                </li>
+            </ul>
+
+            <div class="button-group">
+                <a data-role="button" data-bind="events: { click: formViewModel.cancel }, buttonText: strings.formView.formViewModel.cancelButton"></a>
+                <a class="primary" data-role="button" data-bind="events: { click: formViewModel.submit }, buttonText: strings.formView.formViewModel.submitButton"></a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_formViewModel -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+        <!-- END_CUSTOM_CODE_formViewModel -->
+    </div>
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+
+            <span data-bind="text: strings.formView.title"></span>
+
+            <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+
+        </div>
+    </header>
+
+
+    <!-- START_CUSTOM_CODE_formView -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_formView -->
+</div>

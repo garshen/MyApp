@@ -1,27 +1,27 @@
 'use strict';
 
-app.home = kendo.observable({
+app.farmVisit = kendo.observable({
     onShow: function() {},
     afterShow: function() {}
 });
-app.localization.registerView('home');
+app.localization.registerView('farmVisit');
 
-// START_CUSTOM_CODE_home
+// START_CUSTOM_CODE_farmVisit
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
 
-// END_CUSTOM_CODE_home
+// END_CUSTOM_CODE_farmVisit
 (function(parent) {
     var dataProvider = app.data.myApp,
         /// start global model properties
         /// end global model properties
         fetchFilteredData = function(paramFilter, searchFilter) {
-            var model = parent.get('homeModel'),
+            var model = parent.get('farmVisitModel'),
                 dataSource;
 
             if (model) {
                 dataSource = model.get('dataSource');
             } else {
-                parent.set('homeModel_delayedFetch', paramFilter || null);
+                parent.set('farmVisitModel_delayedFetch', paramFilter || null);
                 return;
             }
 
@@ -64,7 +64,7 @@ app.localization.registerView('home');
         dataSourceOptions = {
             type: 'everlive',
             transport: {
-                typeName: 'Complaints',
+                typeName: 'Farms',
                 dataProvider: dataProvider
             },
             change: function(e) {
@@ -93,8 +93,8 @@ app.localization.registerView('home');
             schema: {
                 model: {
                     fields: {
-                        'Complaint': {
-                            field: 'Complaint',
+                        'Farm': {
+                            field: 'Farm',
                             defaultValue: ''
                         },
                     }
@@ -103,7 +103,7 @@ app.localization.registerView('home');
             serverFiltering: true,
             serverSorting: true,
             sort: {
-                field: 'Complaint',
+                field: 'Farm',
                 dir: 'asc'
             },
             serverPaging: true,
@@ -111,7 +111,7 @@ app.localization.registerView('home');
         },
         /// start data sources
         /// end data sources
-        homeModel = kendo.observable({
+        farmVisitModel = kendo.observable({
             _dataSourceOptions: dataSourceOptions,
             searchChange: function(e) {
                 var searchVal = e.target.value,
@@ -119,12 +119,12 @@ app.localization.registerView('home');
 
                 if (searchVal) {
                     searchFilter = {
-                        field: 'Complaint',
+                        field: 'Farm',
                         operator: 'contains',
                         value: searchVal
                     };
                 }
-                fetchFilteredData(homeModel.get('paramFilter'), searchFilter);
+                fetchFilteredData(farmVisitModel.get('paramFilter'), searchFilter);
             },
             fixHierarchicalData: function(data) {
                 var result = {},
@@ -178,20 +178,20 @@ app.localization.registerView('home');
                 return result;
             },
             itemClick: function(e) {
-                var dataItem = e.dataItem || homeModel.originalItem;
+                var dataItem = e.dataItem || farmVisitModel.originalItem;
 
-                app.mobileApp.navigate('#components/home/details.html?uid=' + dataItem.uid);
+                app.mobileApp.navigate('#components/farmVisit/details.html?uid=' + dataItem.uid);
 
             },
             addClick: function() {
-                app.mobileApp.navigate('#components/home/add.html');
+                app.mobileApp.navigate('#components/farmVisit/add.html');
             },
             editClick: function() {
                 var uid = this.originalItem.uid;
-                app.mobileApp.navigate('#components/home/edit.html?uid=' + uid);
+                app.mobileApp.navigate('#components/farmVisit/edit.html?uid=' + uid);
             },
             deleteItem: function() {
-                var dataSource = homeModel.get('dataSource');
+                var dataSource = farmVisitModel.get('dataSource');
 
                 dataSource.remove(this.originalItem);
 
@@ -222,29 +222,29 @@ app.localization.registerView('home');
             },
             detailsShow: function(e) {
                 var uid = e.view.params.uid,
-                    dataSource = homeModel.get('dataSource'),
+                    dataSource = farmVisitModel.get('dataSource'),
                     itemModel = dataSource.getByUid(uid);
 
-                homeModel.setCurrentItemByUid(uid);
+                farmVisitModel.setCurrentItemByUid(uid);
 
                 /// start detail form show
                 /// end detail form show
             },
             setCurrentItemByUid: function(uid) {
                 var item = uid,
-                    dataSource = homeModel.get('dataSource'),
+                    dataSource = farmVisitModel.get('dataSource'),
                     itemModel = dataSource.getByUid(item);
 
-                if (!itemModel.Complaint) {
-                    itemModel.Complaint = String.fromCharCode(160);
+                if (!itemModel.Farm) {
+                    itemModel.Farm = String.fromCharCode(160);
                 }
 
                 /// start detail form initialization
                 /// end detail form initialization
 
-                homeModel.set('originalItem', itemModel);
-                homeModel.set('currentItem',
-                    homeModel.fixHierarchicalData(itemModel));
+                farmVisitModel.set('originalItem', itemModel);
+                farmVisitModel.set('currentItem',
+                    farmVisitModel.fixHierarchicalData(itemModel));
 
                 return itemModel;
             },
@@ -267,13 +267,11 @@ app.localization.registerView('home');
         /// end add model functions
         onShow: function(e) {
             this.set('addFormData', {
-                ir: '',
                 outcome: '',
-                cell: '',
                 address: '',
-                complainant: '',
-                complaint: '',
-                dateAttend: '',
+                responsiblePerson: '',
+                farm: '',
+                date: '',
                 /// start add form data init
                 /// end add form data init
             });
@@ -286,19 +284,17 @@ app.localization.registerView('home');
         },
         onSaveClick: function(e) {
             var addFormData = this.get('addFormData'),
-                filter = homeModel && homeModel.get('paramFilter'),
-                dataSource = homeModel.get('dataSource'),
+                filter = farmVisitModel && farmVisitModel.get('paramFilter'),
+                dataSource = farmVisitModel.get('dataSource'),
                 addModel = {};
 
             function saveModel(data) {
                 /// start add form data save
-                addModel.IR = addFormData.ir;
                 addModel.Outcome = addFormData.outcome;
-                addModel.Cell = addFormData.cell;
                 addModel.Address = addFormData.address;
-                addModel.Complainant = addFormData.complainant;
-                addModel.Complaint = addFormData.complaint;
-                addModel.DateAttended = addFormData.dateAttend;
+                addModel.ResponsiblePerson = addFormData.responsiblePerson;
+                addModel.Farm = addFormData.farm;
+                addModel.Date = addFormData.date;
                 /// end add form data save
 
                 dataSource.add(addModel);
@@ -327,22 +323,20 @@ app.localization.registerView('home');
         onShow: function(e) {
             var that = this,
                 itemUid = e.view.params.uid,
-                dataSource = homeModel.get('dataSource'),
+                dataSource = farmVisitModel.get('dataSource'),
                 itemData = dataSource.getByUid(itemUid),
-                fixedData = homeModel.fixHierarchicalData(itemData);
+                fixedData = farmVisitModel.fixHierarchicalData(itemData);
 
             /// start edit form before itemData
             /// end edit form before itemData
 
             this.set('itemData', itemData);
             this.set('editFormData', {
-                ir: itemData.IR,
                 outcome: itemData.Outcome,
-                cell: itemData.Cell,
                 address: itemData.Address,
-                complainant: itemData.Complainant,
-                complaint: itemData.Complaint,
-                dateAttend: itemData.DateAttended,
+                responsiblePerson: itemData.ResponsiblePerson,
+                farm: itemData.Farm,
+                date: itemData.Date,
                 /// start edit form data init
                 /// end edit form data init
             });
@@ -358,16 +352,14 @@ app.localization.registerView('home');
             var that = this,
                 editFormData = this.get('editFormData'),
                 itemData = this.get('itemData'),
-                dataSource = homeModel.get('dataSource');
+                dataSource = farmVisitModel.get('dataSource');
 
             /// edit properties
-            itemData.set('IR', editFormData.ir);
             itemData.set('Outcome', editFormData.outcome);
-            itemData.set('Cell', editFormData.cell);
             itemData.set('Address', editFormData.address);
-            itemData.set('Complainant', editFormData.complainant);
-            itemData.set('Complaint', editFormData.complaint);
-            itemData.set('DateAttended', editFormData.dateAttend);
+            itemData.set('ResponsiblePerson', editFormData.responsiblePerson);
+            itemData.set('Farm', editFormData.farm);
+            itemData.set('Date', editFormData.date);
             /// start edit form data save
             /// end edit form data save
 
@@ -402,22 +394,22 @@ app.localization.registerView('home');
 
     if (typeof dataProvider.sbProviderReady === 'function') {
         dataProvider.sbProviderReady(function dl_sbProviderReady() {
-            parent.set('homeModel', homeModel);
-            var param = parent.get('homeModel_delayedFetch');
+            parent.set('farmVisitModel', farmVisitModel);
+            var param = parent.get('farmVisitModel_delayedFetch');
             if (typeof param !== 'undefined') {
-                parent.set('homeModel_delayedFetch', undefined);
+                parent.set('farmVisitModel_delayedFetch', undefined);
                 fetchFilteredData(param);
             }
         });
     } else {
-        parent.set('homeModel', homeModel);
+        parent.set('farmVisitModel', farmVisitModel);
     }
 
     parent.set('onShow', function(e) {
         var param = e.view.params.filter ? JSON.parse(e.view.params.filter) : null,
             isListmenu = false,
             backbutton = e.view.element && e.view.element.find('header [data-role="navbar"] .backButtonWrapper'),
-            dataSourceOptions = homeModel.get('_dataSourceOptions'),
+            dataSourceOptions = farmVisitModel.get('_dataSourceOptions'),
             dataSource;
 
         if (param || isListmenu) {
@@ -432,13 +424,13 @@ app.localization.registerView('home');
         }
 
         dataSource = new kendo.data.DataSource(dataSourceOptions);
-        homeModel.set('dataSource', dataSource);
+        farmVisitModel.set('dataSource', dataSource);
         fetchFilteredData(param);
     });
 
-})(app.home);
+})(app.farmVisit);
 
-// START_CUSTOM_CODE_homeModel
+// START_CUSTOM_CODE_farmVisitModel
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
 
-// END_CUSTOM_CODE_homeModel
+// END_CUSTOM_CODE_farmVisitModel

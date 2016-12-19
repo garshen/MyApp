@@ -1,0 +1,75 @@
+<div data-role="view" data-title="Add" data-model="app.spazaShop.addItemViewModel" data-bind="events: { show: onShow }" id="spazaShopModelAddScreen" class="screen screen--add add-item-view">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <span data-bind="text: strings.spazaShop.spazaShopModel.addScreenHeaderValue"></span>
+            <a data-role="backbutton" data-align="left" data-bind="events: { click: onCancel }">Cancel</a>
+            <a data-role="button" data-align="right" data-bind="events: { click: onSaveClick }">Save</a>
+        </div>
+    </header>
+    <!-- START_CUSTOM_CODE_spazaShopModel -->
+    <!-- END_CUSTOM_CODE_spazaShopModel -->
+    <div id="editableListForm70" class="form-view screen__content screen__content--form">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li class="form-content-item">
+
+
+                    <label id="date4Field" class="field km-listview-label field--date">
+                        <span class="field__label" data-bind="text: strings.spazaShop.spazaShopModel.editableListForm70.date4.title"></span>
+
+
+                        <input id="date4" data-bind="value: addFormData.date4" type="date">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="nameField" class="field km-listview-label field--text">
+                        <span class="field__label" data-bind="text: strings.spazaShop.spazaShopModel.editableListForm70.name.title"></span>
+
+
+                        <input id="name" data-bind="value: addFormData.name" type="text">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="personResponsibleField" class="field km-listview-label field--text">
+                        <span class="field__label" data-bind="text: strings.spazaShop.spazaShopModel.editableListForm70.personResponsible.title"></span>
+
+
+                        <input id="personResponsible" data-bind="value: addFormData.personResponsible" type="text">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="addressField" class="field km-listview-label field--text">
+                        <span class="field__label" data-bind="text: strings.home.homeModel.editableListForm3.address.title"></span>
+
+
+                        <input id="address" data-bind="value: addFormData.address" type="text">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="outcomeField" class="field km-listview-label field--text">
+                        <span class="field__label" data-bind="text: strings.home.homeModel.editableListForm3.outcome.title"></span>
+
+
+                        <input id="outcome" data-bind="value: addFormData.outcome" type="text">
+
+                    </label>
+                </li>
+            </ul>
+        </form>
+        <!-- START_CUSTOM_CODE_editableListForm70 -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+        <!-- END_CUSTOM_CODE_editableListForm70 -->
+    </div>
+</div>

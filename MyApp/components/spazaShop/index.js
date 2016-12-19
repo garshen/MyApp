@@ -1,27 +1,27 @@
 'use strict';
 
-app.home = kendo.observable({
+app.spazaShop = kendo.observable({
     onShow: function() {},
     afterShow: function() {}
 });
-app.localization.registerView('home');
+app.localization.registerView('spazaShop');
 
-// START_CUSTOM_CODE_home
+// START_CUSTOM_CODE_spazaShop
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
 
-// END_CUSTOM_CODE_home
+// END_CUSTOM_CODE_spazaShop
 (function(parent) {
     var dataProvider = app.data.myApp,
         /// start global model properties
         /// end global model properties
         fetchFilteredData = function(paramFilter, searchFilter) {
-            var model = parent.get('homeModel'),
+            var model = parent.get('spazaShopModel'),
                 dataSource;
 
             if (model) {
                 dataSource = model.get('dataSource');
             } else {
-                parent.set('homeModel_delayedFetch', paramFilter || null);
+                parent.set('spazaShopModel_delayedFetch', paramFilter || null);
                 return;
             }
 
@@ -64,7 +64,7 @@ app.localization.registerView('home');
         dataSourceOptions = {
             type: 'everlive',
             transport: {
-                typeName: 'Complaints',
+                typeName: 'Spazashop',
                 dataProvider: dataProvider
             },
             change: function(e) {
@@ -93,8 +93,8 @@ app.localization.registerView('home');
             schema: {
                 model: {
                     fields: {
-                        'Complaint': {
-                            field: 'Complaint',
+                        'Name': {
+                            field: 'Name',
                             defaultValue: ''
                         },
                     }
@@ -103,15 +103,15 @@ app.localization.registerView('home');
             serverFiltering: true,
             serverSorting: true,
             sort: {
-                field: 'Complaint',
+                field: 'Name',
                 dir: 'asc'
             },
             serverPaging: true,
-            pageSize: 50
+            pageSize: 100
         },
         /// start data sources
         /// end data sources
-        homeModel = kendo.observable({
+        spazaShopModel = kendo.observable({
             _dataSourceOptions: dataSourceOptions,
             searchChange: function(e) {
                 var searchVal = e.target.value,
@@ -119,12 +119,12 @@ app.localization.registerView('home');
 
                 if (searchVal) {
                     searchFilter = {
-                        field: 'Complaint',
+                        field: 'Address',
                         operator: 'contains',
                         value: searchVal
                     };
                 }
-                fetchFilteredData(homeModel.get('paramFilter'), searchFilter);
+                fetchFilteredData(spazaShopModel.get('paramFilter'), searchFilter);
             },
             fixHierarchicalData: function(data) {
                 var result = {},
@@ -178,20 +178,20 @@ app.localization.registerView('home');
                 return result;
             },
             itemClick: function(e) {
-                var dataItem = e.dataItem || homeModel.originalItem;
+                var dataItem = e.dataItem || spazaShopModel.originalItem;
 
-                app.mobileApp.navigate('#components/home/details.html?uid=' + dataItem.uid);
+                app.mobileApp.navigate('#components/spazaShop/details.html?uid=' + dataItem.uid);
 
             },
             addClick: function() {
-                app.mobileApp.navigate('#components/home/add.html');
+                app.mobileApp.navigate('#components/spazaShop/add.html');
             },
             editClick: function() {
                 var uid = this.originalItem.uid;
-                app.mobileApp.navigate('#components/home/edit.html?uid=' + uid);
+                app.mobileApp.navigate('#components/spazaShop/edit.html?uid=' + uid);
             },
             deleteItem: function() {
-                var dataSource = homeModel.get('dataSource');
+                var dataSource = spazaShopModel.get('dataSource');
 
                 dataSource.remove(this.originalItem);
 
@@ -222,29 +222,29 @@ app.localization.registerView('home');
             },
             detailsShow: function(e) {
                 var uid = e.view.params.uid,
-                    dataSource = homeModel.get('dataSource'),
+                    dataSource = spazaShopModel.get('dataSource'),
                     itemModel = dataSource.getByUid(uid);
 
-                homeModel.setCurrentItemByUid(uid);
+                spazaShopModel.setCurrentItemByUid(uid);
 
                 /// start detail form show
                 /// end detail form show
             },
             setCurrentItemByUid: function(uid) {
                 var item = uid,
-                    dataSource = homeModel.get('dataSource'),
+                    dataSource = spazaShopModel.get('dataSource'),
                     itemModel = dataSource.getByUid(item);
 
-                if (!itemModel.Complaint) {
-                    itemModel.Complaint = String.fromCharCode(160);
+                if (!itemModel.Name) {
+                    itemModel.Name = String.fromCharCode(160);
                 }
 
                 /// start detail form initialization
                 /// end detail form initialization
 
-                homeModel.set('originalItem', itemModel);
-                homeModel.set('currentItem',
-                    homeModel.fixHierarchicalData(itemModel));
+                spazaShopModel.set('originalItem', itemModel);
+                spazaShopModel.set('currentItem',
+                    spazaShopModel.fixHierarchicalData(itemModel));
 
                 return itemModel;
             },
@@ -267,13 +267,11 @@ app.localization.registerView('home');
         /// end add model functions
         onShow: function(e) {
             this.set('addFormData', {
-                ir: '',
                 outcome: '',
-                cell: '',
                 address: '',
-                complainant: '',
-                complaint: '',
-                dateAttend: '',
+                personResponsible: '',
+                name: '',
+                date4: '',
                 /// start add form data init
                 /// end add form data init
             });
@@ -286,19 +284,17 @@ app.localization.registerView('home');
         },
         onSaveClick: function(e) {
             var addFormData = this.get('addFormData'),
-                filter = homeModel && homeModel.get('paramFilter'),
-                dataSource = homeModel.get('dataSource'),
+                filter = spazaShopModel && spazaShopModel.get('paramFilter'),
+                dataSource = spazaShopModel.get('dataSource'),
                 addModel = {};
 
             function saveModel(data) {
                 /// start add form data save
-                addModel.IR = addFormData.ir;
                 addModel.Outcome = addFormData.outcome;
-                addModel.Cell = addFormData.cell;
                 addModel.Address = addFormData.address;
-                addModel.Complainant = addFormData.complainant;
-                addModel.Complaint = addFormData.complaint;
-                addModel.DateAttended = addFormData.dateAttend;
+                addModel.PersonResponsible = addFormData.personResponsible;
+                addModel.Name = addFormData.name;
+                addModel.Date = addFormData.date4;
                 /// end add form data save
 
                 dataSource.add(addModel);
@@ -327,22 +323,20 @@ app.localization.registerView('home');
         onShow: function(e) {
             var that = this,
                 itemUid = e.view.params.uid,
-                dataSource = homeModel.get('dataSource'),
+                dataSource = spazaShopModel.get('dataSource'),
                 itemData = dataSource.getByUid(itemUid),
-                fixedData = homeModel.fixHierarchicalData(itemData);
+                fixedData = spazaShopModel.fixHierarchicalData(itemData);
 
             /// start edit form before itemData
             /// end edit form before itemData
 
             this.set('itemData', itemData);
             this.set('editFormData', {
-                ir: itemData.IR,
                 outcome: itemData.Outcome,
-                cell: itemData.Cell,
                 address: itemData.Address,
-                complainant: itemData.Complainant,
-                complaint: itemData.Complaint,
-                dateAttend: itemData.DateAttended,
+                personResponsible: itemData.PersonResponsible,
+                name: itemData.Name,
+                date5: itemData.Date,
                 /// start edit form data init
                 /// end edit form data init
             });
@@ -358,16 +352,14 @@ app.localization.registerView('home');
             var that = this,
                 editFormData = this.get('editFormData'),
                 itemData = this.get('itemData'),
-                dataSource = homeModel.get('dataSource');
+                dataSource = spazaShopModel.get('dataSource');
 
             /// edit properties
-            itemData.set('IR', editFormData.ir);
             itemData.set('Outcome', editFormData.outcome);
-            itemData.set('Cell', editFormData.cell);
             itemData.set('Address', editFormData.address);
-            itemData.set('Complainant', editFormData.complainant);
-            itemData.set('Complaint', editFormData.complaint);
-            itemData.set('DateAttended', editFormData.dateAttend);
+            itemData.set('PersonResponsible', editFormData.personResponsible);
+            itemData.set('Name', editFormData.name);
+            itemData.set('Date', editFormData.date5);
             /// start edit form data save
             /// end edit form data save
 
@@ -402,22 +394,22 @@ app.localization.registerView('home');
 
     if (typeof dataProvider.sbProviderReady === 'function') {
         dataProvider.sbProviderReady(function dl_sbProviderReady() {
-            parent.set('homeModel', homeModel);
-            var param = parent.get('homeModel_delayedFetch');
+            parent.set('spazaShopModel', spazaShopModel);
+            var param = parent.get('spazaShopModel_delayedFetch');
             if (typeof param !== 'undefined') {
-                parent.set('homeModel_delayedFetch', undefined);
+                parent.set('spazaShopModel_delayedFetch', undefined);
                 fetchFilteredData(param);
             }
         });
     } else {
-        parent.set('homeModel', homeModel);
+        parent.set('spazaShopModel', spazaShopModel);
     }
 
     parent.set('onShow', function(e) {
         var param = e.view.params.filter ? JSON.parse(e.view.params.filter) : null,
             isListmenu = false,
             backbutton = e.view.element && e.view.element.find('header [data-role="navbar"] .backButtonWrapper'),
-            dataSourceOptions = homeModel.get('_dataSourceOptions'),
+            dataSourceOptions = spazaShopModel.get('_dataSourceOptions'),
             dataSource;
 
         if (param || isListmenu) {
@@ -432,13 +424,13 @@ app.localization.registerView('home');
         }
 
         dataSource = new kendo.data.DataSource(dataSourceOptions);
-        homeModel.set('dataSource', dataSource);
+        spazaShopModel.set('dataSource', dataSource);
         fetchFilteredData(param);
     });
 
-})(app.home);
+})(app.spazaShop);
 
-// START_CUSTOM_CODE_homeModel
+// START_CUSTOM_CODE_spazaShopModel
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
 
-// END_CUSTOM_CODE_homeModel
+// END_CUSTOM_CODE_spazaShopModel

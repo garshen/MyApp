@@ -4,18 +4,1058 @@
     {
       "type": "kendo-ui-mobile:view",
       "name": "home",
-      "components": [],
-      "title": "Home View",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "dateAttend",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "DateAttended"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "complaint",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "Complaint"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "complainant",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "Complainant"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "address",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "Address"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "cell",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "Cell"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "outcome",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "Outcome"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "ir",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "IR"
+                }
+              ],
+              "name": "editableListForm3",
+              "formType": "detail"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "dateAttend",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Date",
+                  "inputType": "date",
+                  "titlePosition": "left",
+                  "inputDateType": "date",
+                  "dataBinding": "DateAttended"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "complaint",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Complaint",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Type of Complaint",
+                  "dataBinding": "Complaint"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "complainant",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Complainant",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Complainant",
+                  "dataBinding": "Complainant"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "address",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Address",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Address of complainant",
+                  "dataBinding": "Address"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "cell",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Cell:",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "tel",
+                  "placeholder": "Cell number",
+                  "dataBinding": "Cell"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "outcome",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Outcome:",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Outcome of complaint",
+                  "dataBinding": "Outcome"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "ir",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "IR:",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "IR number",
+                  "dataBinding": "IR"
+                }
+              ],
+              "name": "editableListForm4",
+              "formType": "add"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "dateAttend",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Date",
+                  "inputType": "date",
+                  "titlePosition": "left",
+                  "inputDateType": "datetime-local",
+                  "dataBinding": "DateAttended"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "complaint",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Complaint:",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Type of Complaint",
+                  "dataBinding": "Complaint"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "complainant",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Complainant:",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Name of Complainant",
+                  "dataBinding": "Complainant"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "address",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Address:",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Address",
+                  "dataBinding": "Address"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "cell",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Cell:",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "tel",
+                  "placeholder": "Cellphone:",
+                  "dataBinding": "Cell"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "outcome",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Outcome:",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Outcome of Complaint",
+                  "dataBinding": "Outcome"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "ir",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "IR:",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "IR number",
+                  "dataBinding": "IR"
+                }
+              ],
+              "name": "editableListForm5",
+              "formType": "edit"
+            }
+          ],
+          "name": "homeModel",
+          "dataProvider": "myApp",
+          "collection": "Complaints",
+          "group": "Complaint",
+          "filterField": "Complaint",
+          "headerField": "Complaint",
+          "addItemForm": true,
+          "addScreenHeaderValue": "Add Complaint",
+          "editItemForm": true,
+          "editScreenHeaderSource": "dataBound",
+          "editScreenHeaderField": "Complaint",
+          "deleteItemButton": true,
+          "deleteItemConfirmation": true,
+          "pullToRefresh": true,
+          "endlessScroll": true,
+          "isMapView": false,
+          "serverSideSorting": true,
+          "serverSideSortingField": "Complaint",
+          "serverSideSortingDirection": "asc",
+          "serverSidePaging": false,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "Complaint"
+        }
+      ],
+      "title": "Complaints",
+      "addToNavigation": true,
+      "icon": "bookmarks"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "farmVisit",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "date",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "Date"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "farm",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "Farm"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "responsiblePerson",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "ResponsiblePerson"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "address",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "Address"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "outcome",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "Outcome"
+                }
+              ],
+              "name": "editableListForm26",
+              "formType": "detail"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "date",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Date",
+                  "inputType": "date",
+                  "titlePosition": "left",
+                  "inputDateType": "datetime-local",
+                  "dataBinding": "Date"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "farm",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Farm:",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Name of farm",
+                  "dataBinding": "Farm"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "responsiblePerson",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Responsible Person:",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Person in charge",
+                  "dataBinding": "ResponsiblePerson"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "address",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Address:",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Address of farm",
+                  "dataBinding": "Address"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "outcome",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Outcome:",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Outcome of visit",
+                  "dataBinding": "Outcome"
+                }
+              ],
+              "name": "editableListForm27",
+              "formType": "add"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "date",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Date",
+                  "inputType": "date",
+                  "titlePosition": "left",
+                  "inputDateType": "datetime-local",
+                  "dataBinding": "Date"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "farm",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Farm:",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Name of farm",
+                  "dataBinding": "Farm"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "responsiblePerson",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Responsible Person:",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Person in charge",
+                  "dataBinding": "ResponsiblePerson"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "address",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Address",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Address of farm",
+                  "dataBinding": "Address"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "outcome",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Outcome:",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Outcome of visit",
+                  "dataBinding": "Outcome"
+                }
+              ],
+              "name": "editableListForm28",
+              "formType": "edit"
+            }
+          ],
+          "name": "farmVisitModel",
+          "dataProvider": "myApp",
+          "collection": "Farms",
+          "filterField": "Farm",
+          "headerField": "Farm",
+          "iconField": false,
+          "addItemForm": true,
+          "addScreenHeaderValue": "Add Farm",
+          "editItemForm": true,
+          "editScreenHeaderSource": "dataBound",
+          "editScreenHeaderField": "Farm",
+          "deleteItemButton": true,
+          "deleteItemConfirmation": true,
+          "pullToRefresh": true,
+          "endlessScroll": true,
+          "isMapView": false,
+          "serverSideSorting": true,
+          "serverSideSortingField": "Farm",
+          "serverSideSortingDirection": "asc",
+          "serverSidePaging": false,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "Farm"
+        }
+      ],
+      "title": "Farm Visit",
       "addToNavigation": true,
       "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "login",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:authentication",
+          "name": "loginModel",
+          "dataProvider": "myApp",
+          "enableRegistration": true,
+          "gotoRegisterLabel": "Register",
+          "registerEmailLabel": "Email",
+          "registerEmailPlaceholder": "Email",
+          "registerPasswordLabel": "Password",
+          "registerPasswordPlaceholder": "Password",
+          "registerLabel": "Register",
+          "registerRedirect": "login",
+          "gotoSigninLabel": "Sign In",
+          "enableLogout": true,
+          "logoutLabel": "Sign Out",
+          "enableRememberme": true,
+          "remembermeLabel": "Remember Me",
+          "emailLabel": "Email",
+          "emailPlaceholder": "Email",
+          "passwordLabel": "Password",
+          "passwordPlaceholder": "Password",
+          "signinLabel": "Sign In",
+          "signinRedirect": "home"
+        }
+      ],
+      "title": "Login/Register",
+      "addToNavigation": true,
+      "icon": "contacts"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "atm",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "date2",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Date",
+                  "inputType": "date",
+                  "titlePosition": "left",
+                  "inputDateType": "date",
+                  "dataBinding": "Date"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "atm",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Atm",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Name of Atm",
+                  "dataBinding": "Atm"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "address",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Address",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Address of Atm",
+                  "dataBinding": "Address"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "outcome",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Outcome",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Outcome of visit",
+                  "dataBinding": "Outcome"
+                }
+              ],
+              "name": "editableListForm46",
+              "formType": "edit"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "date",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "Date"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "heading4",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "Atm"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "heading5",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "Address"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "heading6",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "Outcome"
+                }
+              ],
+              "name": "editableListForm51",
+              "formType": "detail"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "date3",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Date",
+                  "inputType": "date",
+                  "titlePosition": "left",
+                  "inputDateType": "date",
+                  "dataBinding": "Date"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "atm",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Atm",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Name of Atm",
+                  "dataBinding": "Atm"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "address",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Address",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Address of Atm",
+                  "dataBinding": "Address"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "outcome",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Outcome",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Outcome of visit",
+                  "dataBinding": "Outcome"
+                }
+              ],
+              "name": "editableListForm55",
+              "formType": "add"
+            }
+          ],
+          "name": "atmModel",
+          "dataProvider": "myApp",
+          "collection": "Atm",
+          "group": "Atm",
+          "filterField": "Atm",
+          "headerField": "Atm",
+          "addItemForm": true,
+          "addScreenHeaderValue": "Add Atm",
+          "editItemForm": true,
+          "editScreenHeaderSource": "dataBound",
+          "editScreenHeaderField": "Atm",
+          "deleteItemButton": true,
+          "deleteItemConfirmation": true,
+          "pullToRefresh": true,
+          "endlessScroll": true,
+          "isMapView": false,
+          "serverSideSorting": true,
+          "serverSideSortingField": "Atm",
+          "serverSideSortingDirection": "asc",
+          "serverSidePaging": true,
+          "serverSidePagingSize": 100,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "Atm"
+        }
+      ],
+      "title": "Atm Visit",
+      "addToNavigation": true,
+      "icon": "globe"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "spazaShop",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "heading7",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "Date"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "heading8",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "Name"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "heading9",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "PersonResponsible"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "heading10",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "Address"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "heading11",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "Outcome"
+                }
+              ],
+              "name": "editableListForm66",
+              "formType": "detail"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "date4",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Date",
+                  "inputType": "date",
+                  "titlePosition": "left",
+                  "inputDateType": "date",
+                  "dataBinding": "Date"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "name",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Name:",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Name of Spaza",
+                  "dataBinding": "Name"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "personResponsible",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Personresponsible",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Person in charge",
+                  "dataBinding": "PersonResponsible"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "address",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Address:",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Address of Spaza shop",
+                  "dataBinding": "Address"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "outcome",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Outcome:",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Outcome",
+                  "dataBinding": "Outcome"
+                }
+              ],
+              "name": "editableListForm70",
+              "formType": "add"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "date5",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Date",
+                  "inputType": "date",
+                  "titlePosition": "left",
+                  "inputDateType": "date",
+                  "dataBinding": "Date"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "name",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Name",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Name of Spaza shop",
+                  "dataBinding": "Name"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "personResponsible",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Person Responsible",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Person in charge",
+                  "dataBinding": "PersonResponsible"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "address",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Address",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Address of Spaza Shop",
+                  "dataBinding": "Address"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "outcome",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Outcome",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Outcome of visit",
+                  "dataBinding": "Outcome"
+                }
+              ],
+              "name": "editableListForm71",
+              "formType": "edit"
+            }
+          ],
+          "name": "spazaShopModel",
+          "dataProvider": "myApp",
+          "collection": "Spazashop",
+          "group": "Address",
+          "filterField": "Address",
+          "headerField": "Name",
+          "addItemForm": true,
+          "addScreenHeaderValue": "Add Spaza Shop",
+          "editItemForm": true,
+          "editScreenHeaderSource": "dataBound",
+          "editScreenHeaderField": "Name",
+          "deleteItemButton": true,
+          "deleteItemConfirmation": true,
+          "pullToRefresh": true,
+          "endlessScroll": true,
+          "isMapView": false,
+          "serverSideSorting": true,
+          "serverSideSortingField": "Name",
+          "serverSideSortingDirection": "asc",
+          "serverSidePaging": true,
+          "serverSidePagingSize": 100,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "Name"
+        }
+      ],
+      "title": "Spaza Visit",
+      "addToNavigation": true,
+      "icon": "cart"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "formView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "date6",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Date",
+                  "inputType": "date",
+                  "titlePosition": "left",
+                  "inputDateType": "datetime-local",
+                  "dataBinding": "Date"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "textAreaField",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Entry",
+                  "inputType": "textArea",
+                  "wideFieldTitlePosition": "top",
+                  "dataBinding": "Entry"
+                }
+              ],
+              "name": "editableListForm73",
+              "formType": "add"
+            }
+          ],
+          "name": "formViewModel",
+          "enableDataBinding": true,
+          "dataProvider": "myApp",
+          "collection": "Entries",
+          "submitButton": "Save",
+          "cancelButton": "Cancel"
+        }
+      ],
+      "title": "Entries",
+      "addToNavigation": true,
+      "icon": "bookmarks"
     }
   ],
-  "dataProviders": [],
+  "dataProviders": [
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "pocketBook",
+      "source": "everlive",
+      "everliveKey": "o7h7my8d0de0q1md",
+      "offlineStorage": true,
+      "title": "PocketBook / PocketBook"
+    },
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "myApp",
+      "source": "everlive",
+      "everliveKey": "b5h6gd6e2m7gx00j",
+      "offlineStorage": true,
+      "title": "MyApp / MyApp"
+    }
+  ],
   "name": "kendoUiMobileApp",
-  "navigation": "tabstrip",
+  "navigation": "drawer",
   "view": "home",
-  "transition": "slide",
-  "showMoreTab": true,
   "skin": "nova",
   "skinMainColor": "#32364c",
   "skinTextColor": "#ffffff",

@@ -1,0 +1,39 @@
+<div data-role="view" data-title="View" data-layout="main" data-model="app.farmVisit" data-show="app.farmVisit.onShow" data-after-show="app.farmVisit.afterShow" id="farmVisitScreen" class="screen">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+
+            <span data-bind="text: strings.farmVisit.title"></span>
+
+            <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+
+            <a data-role="button" data-align="right" data-bind="events: { click: farmVisitModel.addClick }">Add</a></div>
+    </header>
+
+
+    <!-- START_CUSTOM_CODE_farmVisit -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_farmVisit -->
+    <!--  Certain features like grouping and inset styling are not supported when endless scroll is enabled. -->
+    <form class="km-filter-form custom-filter">
+        <div class="km-filter-wrap">
+            <input type="search" placeholder="Search..." data-bind="events:{keyup: farmVisitModel.searchChange}">
+        </div>
+    </form>
+    <ul class="masterDetailView" data-role="listview" data-auto-bind="false" data-style="" data-template="farmVisitModelTemplate" data-bind="source: farmVisitModel.dataSource, events: {click: farmVisitModel.itemClick}" data-pull-to-refresh="true" data-endless-scroll="true">
+    </ul>
+
+
+    <!-- START_CUSTOM_CODE_farmVisitModel -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_farmVisitModel -->
+    <script type="text/x-kendo-template" id="farmVisitModelTemplate">
+        <div class="image-with-text">
+            # data = app.farmVisit.farmVisitModel.fixHierarchicalData(data); #
+
+            <h3>#: data['Farm'] #</h3>
+
+        </div>
+    </script>
+</div>

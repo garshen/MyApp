@@ -1,0 +1,97 @@
+<div data-role="view" data-title="Edit" data-model="app.home.editItemViewModel" data-bind="events: { show: onShow }" id="homeModelEditScreen" class="screen screen--edit edit-item-view">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <span data-bind="text: itemData['Complaint']"></span>
+            <a data-role="backbutton" data-align="left" data-bind="events: { click: onCancel }">Cancel</a>
+            <a data-role="button" data-align="right" data-bind="events: { click: onSaveClick }">Save</a>
+        </div>
+    </header>
+    <!-- START_CUSTOM_CODE_homeModel -->
+    <!-- END_CUSTOM_CODE_homeModel -->
+    <div id="editableListForm5" class="form-view screen__content screen__content--form">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li class="form-content-item">
+
+
+                    <label id="dateAttendField" class="field km-listview-label field--datetime-local">
+                        <span class="field__label" data-bind="text: strings.home.homeModel.editableListForm3.dateAttend.title"></span>
+
+
+                        <input id="dateAttend" data-bind="value: editFormData.dateAttend" type="datetime-local">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="complaintField" class="field km-listview-label field--text">
+                        <span class="field__label" data-bind="text: strings.home.homeModel.editableListForm3.complaint.title"></span>
+
+
+                        <input id="complaint" data-bind="value: editFormData.complaint" type="text">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="complainantField" class="field km-listview-label field--text">
+                        <span class="field__label" data-bind="text: strings.home.homeModel.editableListForm3.complainant.title"></span>
+
+
+                        <input id="complainant" data-bind="value: editFormData.complainant" type="text">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="addressField" class="field km-listview-label field--text">
+                        <span class="field__label" data-bind="text: strings.home.homeModel.editableListForm3.address.title"></span>
+
+
+                        <input id="address" data-bind="value: editFormData.address" type="text">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="cellField" class="field km-listview-label field--tel">
+                        <span class="field__label" data-bind="text: strings.home.homeModel.editableListForm3.cell.title"></span>
+
+
+                        <input id="cell" data-bind="value: editFormData.cell" type="tel">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="outcomeField" class="field km-listview-label field--text">
+                        <span class="field__label" data-bind="text: strings.home.homeModel.editableListForm3.outcome.title"></span>
+
+
+                        <input id="outcome" data-bind="value: editFormData.outcome" type="text">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="irField" class="field km-listview-label field--text">
+                        <span class="field__label" data-bind="text: strings.home.homeModel.editableListForm3.ir.title"></span>
+
+
+                        <input id="ir" data-bind="value: editFormData.ir" type="text">
+
+                    </label>
+                </li>
+            </ul>
+        </form>
+        <!-- START_CUSTOM_CODE_editableListForm5 -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+        <!-- END_CUSTOM_CODE_editableListForm5 -->
+    </div>
+</div>

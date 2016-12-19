@@ -5,6 +5,172 @@
     "qrCodeScan": "Scan"
   },
   "home": {
-    "title": "Home View"
+    "title": "Complaints",
+    "homeModel": {
+      "addScreenHeaderValue": "Add Complaint",
+      "editableListForm3": {
+        "dateAttend": {
+          "title": "Date"
+        },
+        "complaint": {
+          "title": "Complaint:",
+          "placeholder": "Type of Complaint"
+        },
+        "complainant": {
+          "title": "Complainant:",
+          "placeholder": "Name of Complainant"
+        },
+        "address": {
+          "title": "Address",
+          "placeholder": "Address of Spaza Shop"
+        },
+        "cell": {
+          "title": "Cell:",
+          "placeholder": "Cellphone:"
+        },
+        "outcome": {
+          "title": "Outcome",
+          "placeholder": "Outcome of visit"
+        },
+        "ir": {
+          "title": "IR:",
+          "placeholder": "IR number"
+        }
+      },
+      "editableListForm4": {},
+      "editableListForm5": {}
+    }
+  },
+  "farmVisit": {
+    "title": "Farm Visit",
+    "farmVisitModel": {
+      "addScreenHeaderValue": "Add Farm",
+      "editableListForm26": {
+        "date": {
+          "title": "Heading"
+        },
+        "farm": {
+          "title": "Farm:",
+          "placeholder": "Name of farm"
+        },
+        "responsiblePerson": {
+          "title": "Responsible Person:",
+          "placeholder": "Person in charge"
+        }
+      },
+      "editableListForm27": {},
+      "editableListForm28": {}
+    }
+  },
+  "login": {
+    "title": "Login/Register",
+    "loginModel": {
+      "logoutLabel": "Sign Out",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Email",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Password",
+      "signinLabel": "Sign In",
+      "gotoRegisterLabel": "Register",
+      "remembermeLabel": "Remember Me",
+      "registerEmailLabel": "Email",
+      "registerEmailPlaceholder": "Email",
+      "registerPasswordLabel": "Password",
+      "registerPasswordPlaceholder": "Password",
+      "registerLabel": "Register",
+      "gotoSigninLabel": "Sign In"
+    }
+  },
+  "atm": {
+    "title": "Atm",
+    "atmModel": {
+      "detailHeaderFieldValue": "Detail",
+      "addScreenHeaderValue": "Add Atm",
+      "editScreenHeaderValue": "Edit",
+      "editableListForm45": {
+        "date1": {
+          "title": "Date"
+        }
+      },
+      "editableListForm46": {
+        "date2": {
+          "title": "Date"
+        }
+      },
+      "editableListForm51": {
+        "heading4": {
+          "title": "Heading"
+        },
+        "heading5": {
+          "title": "Heading"
+        },
+        "heading6": {
+          "title": "Heading"
+        }
+      },
+      "editableListForm55": {
+        "date3": {
+          "title": "Date"
+        }
+      }
+    },
+    "placeholder": "Name of Atm"
+  },
+  "spazaShop": {
+    "title": "Spaza Visit",
+    "spazaShopModel": {
+      "addScreenHeaderValue": "Add Spaza Shop",
+      "editScreenHeaderValue": "Edit",
+      "editableListForm66": {
+        "heading7": {
+          "title": "Heading"
+        },
+        "heading8": {
+          "title": "Heading"
+        },
+        "heading9": {
+          "title": "Heading"
+        },
+        "heading10": {
+          "title": "Heading"
+        },
+        "heading11": {
+          "title": "Heading"
+        }
+      },
+      "editableListForm70": {
+        "date4": {
+          "title": "Date"
+        },
+        "name": {
+          "title": "Name",
+          "placeholder": "Name of Spaza shop"
+        },
+        "personResponsible": {
+          "title": "Person Responsible",
+          "placeholder": "Person in charge"
+        }
+      },
+      "editableListForm71": {
+        "date5": {
+          "title": "Date"
+        }
+      }
+    }
+  },
+  "formView": {
+    "title": "Entries",
+    "formViewModel": {
+      "submitButton": "Save",
+      "cancelButton": "Cancel",
+      "editableListForm73": {
+        "date6": {
+          "title": "Date"
+        },
+        "textAreaField": {
+          "title": "Entry"
+        }
+      }
+    }
   }
 }
