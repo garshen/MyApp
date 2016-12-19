@@ -84,14 +84,7 @@
   "atm": {
     "title": "Atm",
     "atmModel": {
-      "detailHeaderFieldValue": "Detail",
       "addScreenHeaderValue": "Add Atm",
-      "editScreenHeaderValue": "Edit",
-      "editableListForm45": {
-        "date1": {
-          "title": "Date"
-        }
-      },
       "editableListForm46": {
         "date2": {
           "title": "Date"
@@ -120,7 +113,6 @@
     "title": "Spaza Visit",
     "spazaShopModel": {
       "addScreenHeaderValue": "Add Spaza Shop",
-      "editScreenHeaderValue": "Edit",
       "editableListForm66": {
         "heading7": {
           "title": "Heading"
@@ -158,19 +150,41 @@
       }
     }
   },
-  "formView": {
+  "entries": {
     "title": "Entries",
-    "formViewModel": {
-      "submitButton": "Save",
-      "cancelButton": "Cancel",
-      "editableListForm73": {
+    "entriesModel": {
+      "addScreenHeaderValue": "Add Entry",
+      "editableListForm77": {
+        "heading12": {
+          "title": "Heading"
+        },
+        "heading13": {
+          "title": "Heading"
+        }
+      },
+      "editableListForm78": {
         "date6": {
           "title": "Date"
         },
         "textAreaField": {
           "title": "Entry"
         }
+      },
+      "editableListForm79": {
+        "date7": {
+          "title": "Date"
+        },
+        "textAreaField1": {
+          "title": "Entry"
+        }
       }
+    }
+  },
+  "formView": {
+    "title": "Suspects",
+    "formViewModel": {
+      "submitButton": "Confirm",
+      "cancelButton": "Cancel"
     }
   }
 }

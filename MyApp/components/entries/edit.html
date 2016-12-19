@@ -1,0 +1,39 @@
+<div data-role="view" data-title="Edit" data-model="app.entries.editItemViewModel" data-bind="events: { show: onShow }" id="entriesModelEditScreen" class="screen screen--edit edit-item-view">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <span data-bind="text: itemData['Entry']"></span>
+            <a data-role="backbutton" data-align="left" data-bind="events: { click: onCancel }">Cancel</a>
+            <a data-role="button" data-align="right" data-bind="events: { click: onSaveClick }">Save</a>
+        </div>
+    </header>
+    <!-- START_CUSTOM_CODE_entriesModel -->
+    <!-- END_CUSTOM_CODE_entriesModel -->
+    <div id="editableListForm79" class="form-view screen__content screen__content--form">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li class="form-content-item">
+
+
+                    <label id="date7Field" class="field km-listview-label field--date">
+                        <span class="field__label" data-bind="text: strings.entries.entriesModel.editableListForm79.date7.title"></span>
+
+
+                        <input id="date7" data-bind="value: editFormData.date7" type="date">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+                    <label id="textAreaField1Field" class="km-label-above field field--textarea">
+
+                        <span class="field__label" data-bind="text: strings.entries.entriesModel.editableListForm79.textAreaField1.title"></span>
+
+                        <textarea rows="7" data-bind="value: editFormData.textAreaField1"></textarea>
+                    </label>
+                </li>
+            </ul>
+        </form>
+        <!-- START_CUSTOM_CODE_editableListForm79 -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+        <!-- END_CUSTOM_CODE_editableListForm79 -->
+    </div>
+</div>

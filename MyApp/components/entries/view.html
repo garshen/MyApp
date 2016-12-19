@@ -1,0 +1,39 @@
+<div data-role="view" data-title="View" data-layout="main" data-model="app.entries" data-show="app.entries.onShow" data-after-show="app.entries.afterShow" id="entriesScreen" class="screen">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+
+            <span data-bind="text: strings.entries.title"></span>
+
+            <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+
+            <a data-role="button" data-align="right" data-bind="events: { click: entriesModel.addClick }">Add</a></div>
+    </header>
+
+
+    <!-- START_CUSTOM_CODE_entries -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_entries -->
+    <!--  Certain features like grouping and inset styling are not supported when endless scroll is enabled. -->
+    <form class="km-filter-form custom-filter">
+        <div class="km-filter-wrap">
+            <input type="search" placeholder="Search..." data-bind="events:{keyup: entriesModel.searchChange}">
+        </div>
+    </form>
+    <ul class="masterDetailView" data-role="listview" data-auto-bind="false" data-style="" data-template="entriesModelTemplate" data-bind="source: entriesModel.dataSource, events: {click: entriesModel.itemClick}" data-pull-to-refresh="true" data-endless-scroll="true">
+    </ul>
+
+
+    <!-- START_CUSTOM_CODE_entriesModel -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_entriesModel -->
+    <script type="text/x-kendo-template" id="entriesModelTemplate">
+        <div class="image-with-text">
+            # data = app.entries.entriesModel.fixHierarchicalData(data); #
+
+            <h3>#: data['Entry'] #</h3>
+
+        </div>
+    </script>
+</div>

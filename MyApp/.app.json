@@ -988,11 +988,42 @@
     },
     {
       "type": "kendo-ui-mobile:view",
-      "name": "formView",
+      "name": "entries",
       "components": [
         {
-          "type": "kendo-ui-mobile:form",
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
           "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "heading12",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "Date"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "heading13",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h3",
+                  "dataBindingOptional": "Entry"
+                }
+              ],
+              "name": "editableListForm77",
+              "formType": "detail"
+            },
             {
               "type": "kendo-ui-mobile:editableListForm",
               "components": [
@@ -1004,7 +1035,7 @@
                   "title": "Date",
                   "inputType": "date",
                   "titlePosition": "left",
-                  "inputDateType": "datetime-local",
+                  "inputDateType": "date",
                   "dataBinding": "Date"
                 },
                 {
@@ -1018,19 +1049,80 @@
                   "dataBinding": "Entry"
                 }
               ],
-              "name": "editableListForm73",
+              "name": "editableListForm78",
               "formType": "add"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "date7",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Date",
+                  "inputType": "date",
+                  "titlePosition": "left",
+                  "inputDateType": "date",
+                  "dataBinding": "Date"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "textAreaField1",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Entry",
+                  "inputType": "textArea",
+                  "wideFieldTitlePosition": "top",
+                  "dataBinding": "Entry"
+                }
+              ],
+              "name": "editableListForm79",
+              "formType": "edit"
             }
           ],
-          "name": "formViewModel",
-          "enableDataBinding": true,
+          "name": "entriesModel",
           "dataProvider": "myApp",
           "collection": "Entries",
-          "submitButton": "Save",
-          "cancelButton": "Cancel"
+          "group": "Entry",
+          "filterField": "Entry",
+          "headerField": "Entry",
+          "addItemForm": true,
+          "addScreenHeaderValue": "Add Entry",
+          "editItemForm": true,
+          "editScreenHeaderSource": "dataBound",
+          "editScreenHeaderField": "Entry",
+          "deleteItemButton": true,
+          "deleteItemConfirmation": true,
+          "pullToRefresh": true,
+          "endlessScroll": true,
+          "isMapView": false,
+          "serverSideSorting": true,
+          "serverSideSortingField": "Entry",
+          "serverSideSortingDirection": "asc",
+          "serverSidePaging": false,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "Entry"
         }
       ],
       "title": "Entries",
+      "addToNavigation": true,
+      "icon": "edit"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "formView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [],
+          "name": "formViewModel",
+          "enableDataBinding": false,
+          "submitButton": "Confirm",
+          "cancelButton": "Cancel"
+        }
+      ],
+      "title": "Suspects",
       "addToNavigation": true,
       "icon": "bookmarks"
     }

@@ -1,0 +1,39 @@
+<div data-role="view" data-title="Add" data-model="app.entries.addItemViewModel" data-bind="events: { show: onShow }" id="entriesModelAddScreen" class="screen screen--add add-item-view">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <span data-bind="text: strings.entries.entriesModel.addScreenHeaderValue"></span>
+            <a data-role="backbutton" data-align="left" data-bind="events: { click: onCancel }">Cancel</a>
+            <a data-role="button" data-align="right" data-bind="events: { click: onSaveClick }">Save</a>
+        </div>
+    </header>
+    <!-- START_CUSTOM_CODE_entriesModel -->
+    <!-- END_CUSTOM_CODE_entriesModel -->
+    <div id="editableListForm78" class="form-view screen__content screen__content--form">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li class="form-content-item">
+
+
+                    <label id="date6Field" class="field km-listview-label field--date">
+                        <span class="field__label" data-bind="text: strings.entries.entriesModel.editableListForm78.date6.title"></span>
+
+
+                        <input id="date6" data-bind="value: addFormData.date6" type="date">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+                    <label id="textAreaFieldField" class="km-label-above field field--textarea">
+
+                        <span class="field__label" data-bind="text: strings.entries.entriesModel.editableListForm78.textAreaField.title"></span>
+
+                        <textarea rows="7" data-bind="value: addFormData.textAreaField"></textarea>
+                    </label>
+                </li>
+            </ul>
+        </form>
+        <!-- START_CUSTOM_CODE_editableListForm78 -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+        <!-- END_CUSTOM_CODE_editableListForm78 -->
+    </div>
+</div>
